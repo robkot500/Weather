@@ -1,0 +1,138 @@
+@import "partials/_reset";
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-size:1vw;
+}
+
+$gutter: 0;
+@mixin grid($cols) {
+  @media screen and (min-width: 400px) {
+    display: flex;
+    @for $i from 1 through $cols {
+      .col-#{$i} {
+        flex: 0 0 (100% / $cols) * $i;
+      }
+    }
+  }
+}
+.container {
+  width: 80%;
+  margin: 10% auto;
+  padding: 0 $gutter;
+  .row {
+    margin-left: -$gutter;
+    margin-right: -$gutter;
+    [class*="col-"] {
+      padding: 0 $gutter;
+      margin-bottom: $gutter;
+    }
+    @include grid(8);
+  }
+}
+.container{
+  box-shadow:3px 3px 6px black;
+  border-radius: 50px;
+
+}
+.box {
+  padding: 0;
+  background: rgb(105, 20, 20);
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  min-height: 50px;
+  flex: 1;
+  border:1px solid black;
+}
+
+.box-1 {
+  background-color: #4E4D4A;
+  height: 8vw;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
+.box-2 {
+  background-color: blue;
+}
+.box-3 {
+  background-color: yellow;
+
+}
+.box-4 {
+  background-color: darken(blue, 10%);
+}
+.first-small{
+    border-bottom-left-radius: 50px;
+}
+.last-small{
+  border-bottom-right-radius: 50px;
+}
+.box-5 {
+  background-color: red;
+}
+.header-wrapper{
+  font-size: 2vw;
+  height: 4vw;
+}
+.header-wrapper:first-child{
+  border-radius: 50px;
+
+}
+.cont {
+  position: relative;
+  width: 100%;
+  padding-top: 60%;
+}
+.cont-small{
+  padding-top: 80%;
+
+}
+
+
+
+.text {
+  position:  absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  font-size: 5em;
+  color: white;
+  padding:0.5em;
+}
+.sec2{
+  display: none;
+}
+@media screen and (max-width: 400px) {
+  .cont {
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+  }
+  .cont-small{
+    padding-top: 27%;
+  }
+  .container{
+    width: 100%;
+  }
+  .box{
+    border-radius: unset;
+  }
+
+}
+
+@media screen and (min-width: 401px) and (max-width: 899px) {
+.container{
+  width: 100%;
+}
+}
+@media screen and (min-width: 900px) {
+
+}
