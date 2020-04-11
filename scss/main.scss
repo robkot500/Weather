@@ -9,6 +9,7 @@
 
 body{
   font-size:1vw;
+  font-family: $font;
 }
 
 $gutter: 0;
@@ -93,7 +94,15 @@ $gutter: 0;
   }
 }
 .box-2 {
-  background-color: green;
+  background-color: $third-color;
+  height: 5vw;
+  font-size: 3vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  .time{
+    font-size: 2vw;
+  }
 }
 .box-3 {
   background-color: yellow;
@@ -135,8 +144,17 @@ $gutter: 0;
       }
       .fa-map-marked-alt{
         font-size: 5.5vw;
-        left:52vw;
+        left:52.5vw;
         top:0.7vw;
+      }
+    }
+    .box-2 {
+
+      height: 5vw;
+      font-size: 6vw;
+
+      .time{
+        font-size: 4vw;
       }
     }
   }

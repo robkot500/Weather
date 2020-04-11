@@ -4,6 +4,7 @@ import './../scss/main.scss';
 import Main from "./Main";
 import Header from "./Header";
 import Footer from "./Footer";
+import Section from "./Section";
 
 const isDesktop = window.matchMedia("screen and (min-width: 400px)");
 console.log(isDesktop)
@@ -21,6 +22,7 @@ const App = () =>{
         <>
             <div className='container'>
                 <Header setData={setData}/>
+                <Section data={data}/>
                 <Main data={data}/>
                 <Footer data={data}/>
             </div>
