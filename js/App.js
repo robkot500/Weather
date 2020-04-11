@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import './../scss/main.scss';
 import Main from "./Main";
 import Header from "./Header";
-import Section from "./Section";
+import Footer from "./Footer";
 
 const isDesktop = window.matchMedia("screen and (min-width: 400px)");
 console.log(isDesktop)
@@ -19,18 +19,10 @@ const App = () =>{
     console.log(data)
     return(
         <>
-
-
-            <div className="container">
-                <div className="row">
-                    <div className="col-8">
-                        <div className="box box-1">
-                            <Header setData={setData}/>
-                        </div>
-                    </div>
-                </div>
+            <div className='container'>
+                <Header setData={setData}/>
                 <Main data={data}/>
-                <Section/>
+                <Footer data={data}/>
             </div>
         </>
     )

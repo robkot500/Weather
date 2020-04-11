@@ -1,4 +1,5 @@
 @import "partials/_reset";
+@import "partials/_variables";
 
 *{
   margin: 0;
@@ -37,7 +38,8 @@ $gutter: 0;
 }
 .container{
   box-shadow:3px 3px 6px black;
-  border-radius: 50px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
 
 }
 .box {
@@ -52,87 +54,98 @@ $gutter: 0;
 }
 
 .box-1 {
-  background-color: #4E4D4A;
-  height: 8vw;
+  background-color: $dark-background;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
+  height: 5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  input{
+    width: 18vw;
+    height: 2.5vw;
+    background-color: $light-background;
+    border: 1px solid $light-background;
+    //margin: 1.2vw;
+    border-radius: 50px;
+    padding: 0 2vw;
+    font-size: 1.3vw;
+
+  }
+  .search{
+    position: relative;
+  }
+  .fa-search{
+    color:$color;
+    font-size: 1.4vw;
+    position: absolute;
+    left:15.5vw;
+    top:0.6vw;
+    cursor: pointer;
+  }
+  .fa-map-marked-alt{
+    color:$color;
+    font-size: 2.3vw;
+    position: absolute;
+    left:19vw;
+    top:0.1vw;
+    cursor: pointer;
+  }
 }
 .box-2 {
-  background-color: blue;
+  background-color: green;
 }
 .box-3 {
   background-color: yellow;
 
 }
 .box-4 {
-  background-color: darken(blue, 10%);
+  background-color: blue;
 }
-.first-small{
-    border-bottom-left-radius: 50px;
-}
-.last-small{
-  border-bottom-right-radius: 50px;
-}
+
 .box-5 {
   background-color: red;
 }
-.header-wrapper{
-  font-size: 2vw;
-  height: 4vw;
-}
-.header-wrapper:first-child{
-  border-radius: 50px;
-
-}
-.cont {
-  position: relative;
+.header-wrapperA{
   width: 100%;
-  padding-top: 60%;
+  color: red;
 }
-.cont-small{
-  padding-top: 80%;
-
+.header-wrapperB{
+  width: 100%;
+  color: blue;
 }
 
-
-
-.text {
-  position:  absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  text-align: center;
-  font-size: 5em;
-  color: white;
-  padding:0.5em;
-}
-.sec2{
-  display: none;
-}
-@media screen and (max-width: 400px) {
-  .cont {
-    position: relative;
-    width: 100%;
-    padding-top: 100%;
-  }
-  .cont-small{
-    padding-top: 27%;
-  }
+@media screen and (max-width: 600px) {
   .container{
+    margin: 0;
     width: 100%;
-  }
-  .box{
     border-radius: unset;
+    .box-1{
+      border-radius: unset;
+      height: 15vw;
+      input{
+        width: 50vw;
+        height: 7vw;
+        font-size: 3vw;
+      }
+      .fa-search{
+        font-size: 4vw;
+        left:43vw;
+        top:1.5vw;
+      }
+      .fa-map-marked-alt{
+        font-size: 5.5vw;
+        left:52vw;
+        top:0.7vw;
+      }
+    }
   }
-
 }
 
-@media screen and (min-width: 401px) and (max-width: 899px) {
-.container{
-  width: 100%;
-}
+@media screen and (min-width: 601px) and (max-width: 899px) {
+
 }
 @media screen and (min-width: 900px) {
 
 }
+
