@@ -14,7 +14,7 @@ body{
 
 $gutter: 0;
 @mixin grid($cols) {
-  @media screen and (min-width: 400px) {
+  @media screen and (min-width: 600px) {
     display: flex;
     @for $i from 1 through $cols {
       .col-#{$i} {
@@ -51,7 +51,7 @@ $gutter: 0;
   text-align: center;
   min-height: 50px;
   flex: 1;
-  border:1px solid black;
+  //border:1px solid black;
 }
 
 .box-1 {
@@ -105,13 +105,76 @@ $gutter: 0;
   }
 }
 .box-3 {
-  background-color: yellow;
+  background-color: white;
+  height: 25vw;
+  padding: 10px 0 10px 10px;
+
+  .big{
+    width: 100%;
+    height: 100%;
+  }
+  .line-big{
+    border: 2px solid $light-background;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  .line-cover-big{
+    background-color: white;
+    height: 2vw;
+    width: 8.5vw;
+    position: absolute;
+    top:-0.7vw;
+    left: 2vw;
+    font-size: 1.4vw;
+    color: $third-color;
+  }
 
 }
+.last-box-3{
+  padding-right: 0.8vw;
+}
+
 .box-4 {
-  background-color: blue;
+  background-color: $light-background;
+  height: 13vw;
+  padding: 0.8vw 0 0.8vw 0.8vw;
+  .small{
+    width: 100%;
+    height: 100%;
+  }
+  .line-small{
+    border: 2px solid white;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  .line-cover-small{
+    background-color: $light-background;
+    height: 2vw;
+    width: 8vw;
+    position: absolute;
+    top:-0.5vw;
+    left: 2vw;
+    font-size: 1.4vw;
+    color: $third-color;
+  }
+  .small-description{
+    margin-top: 10%;
+    margin-bottom: 3%;
+    font-size: 1.3vw;
+  }
+  .small-icon{
+    font-size: 3.5vw;
+    color: $third-color;
+    img{
+      width: 45%;
+    }
+  }
 }
-
+.last-box-4{
+  padding-right: 10px;
+}
 .box-5 {
   background-color: red;
 }
