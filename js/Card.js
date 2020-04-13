@@ -106,30 +106,25 @@ const Card = ({data, type, index, dayOfWeek}) => {
             case 4: day='Czwartek'; break;
             case 5: day='Piątek'; break;
             case 6: day='Sobota'; break;
-            default: day='???';
+            default: day='Pogoda teraz';
                 console.log(day)
         }
 
     console.log(day, 'date')
-
-
-
-
-
-    console.log(data, 'wwwwww')
-
+    let f;
+    let t;
 
     if(type === 'small') {
         return (
 
-                        <div className="small">
-                            <div className="line-small">
-                                <div className="line-cover-small">{day}</div>
-                            <div className='small-description'>{description}</div>
-                            <div className='small-icon'><img src={srcI} alt="weather" className='icon'/>
-                                {temp}°C</div>
-                            </div>
-                        </div>
+            <div className="small">
+                <div className="line-small">
+                    <div className="line-cover-small">{day}</div>
+                    <div className='small-description'>{description}</div>
+                    <div className='small-icon'><img src={srcI} alt="weather" className='icon'/>
+                        {temp}°C</div>
+                </div>
+            </div>
 
 
         );
@@ -140,13 +135,40 @@ const Card = ({data, type, index, dayOfWeek}) => {
             <div className="big">
                 <div className="line-big">
                     <div className="line-cover-big">{day}</div>
-                    <div className='small-description'>{description}</div>
-                    <div className='small-icon'><img src={srcI} alt="weather" className='icon'/>
-                        {temp}°C</div>
+                    <div className="big-wrapper1">
+                        <div className='big-description'>{description}</div>
+                        <div className='big-icon'><img src={srcI} alt="weather" className='icon'/>
+                            {temp}°C</div>
+                    </div>
+                    <div className="big-wrapper2">
+                        <div className="big-wrapper2-section">
+                            Ciśnienie<br/>
+                            {pressure}hPa
+                        </div>
+                        <div className="big-wrapper2-section">
+                            Prędkość wiatru<br/>
+                            {wind}km/h
+                        </div>
+                        <div className="big-wrapper2-section">
+                            Odczuwalna temp.<br/>
+                            {feels}°C
+                        </div>
+                        <div className="big-wrapper2-section">
+                            Wilgotność<br/>
+                            {humidity}%
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
         );
     }
+
+
+
+
+
 }
 
 export default Card;

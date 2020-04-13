@@ -118,17 +118,72 @@ $gutter: 0;
     width: 100%;
     height: 100%;
     position: relative;
+    display: flex;
+
   }
   .line-cover-big{
     background-color: white;
     height: 2vw;
     width: 8.5vw;
     position: absolute;
-    top:-0.7vw;
+    top:-0.5vw;
     left: 2vw;
     font-size: 1.4vw;
     color: $third-color;
   }
+  .big-wrapper1{
+    width: 65%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .big-description{
+    padding-top: 3vw;
+    padding-bottom: 2vw;
+    color: $dark-background;
+    font-size: 2vw;
+
+  }
+  .big-icon{
+    color: $dark-background;
+    font-size: 4vw;
+    color: $third-color;
+    img{
+      width: 60%;
+      margin-right: -6%;
+      margin-left: -20%;
+    }
+  }
+  .big-wrapper2{
+    width: 35%;
+    height: calc(100% - 2vw);
+    margin: auto;
+    //margin: 1vw 0 ;
+    padding: 1vw;
+    border-left: 2px solid $light-background;
+    .big-wrapper2-section{
+      border-bottom: 2px solid $light-background;
+      width: 100%;
+      height: 28%;
+      color: $dark-background;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.2vw;
+      line-height: 1.5vw;
+      &:first-child{
+        margin-top: -1vw;
+      }
+      &:last-child{
+        border-bottom: unset;
+      }
+    }
+
+  }
+  display: flex;
+  flex-direction: column;
+
+
 
 }
 .last-box-3{
@@ -220,11 +275,17 @@ $gutter: 0;
         font-size: 4vw;
       }
     }
+    .box-4{
+      .line-small{
+       border: unset;
+      }
+    }
   }
 }
 
 @media screen and (min-width: 601px) and (max-width: 899px) {
-
+  .container{
+  }
 }
 @media screen and (min-width: 900px) {
 

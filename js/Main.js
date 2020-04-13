@@ -22,7 +22,7 @@ const Main = ({data})=>{
                 <div className="col-4">
                     <div className="box box-3">
 
-                        <Card data={data} index={0} type={'big'} dayOfWeek={0}/>
+                        <Card data={data} index={0} type={'big'} dayOfWeek={100}/>
                     </div>
                 </div>
                 <div className="col-4">
