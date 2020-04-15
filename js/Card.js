@@ -106,13 +106,18 @@ const Card = ({data, type, index, dayOfWeek}) => {
             case 4: day='Czwartek'; break;
             case 5: day='Piątek'; break;
             case 6: day='Sobota'; break;
+            case 7: day='Niedziela'; break;
+            case 8: day='Poniedziałek'; break;
+            case 9: day='Wtorek'; break;
+            case 10: day='Sroda'; break;
+            case 11: day='Czwartek'; break;
+            case 12: day='Piątek'; break;
+            case 13: day='Sobota'; break;
             default: day='Pogoda teraz';
                 console.log(day)
         }
 
     console.log(day, 'date')
-    let f;
-    let t;
 
     if(type === 'small') {
         return (
