@@ -5,16 +5,9 @@ import Main from "./Main";
 import Header from "./Header";
 import Footer from "./Footer";
 import Section from "./Section";
+import New from "./New";
 
-const isDesktop = window.matchMedia("screen and (min-width: 400px)");
-console.log(isDesktop)
-isDesktop.addListener(function(event) {
-    if (event.matches) {
-        console.log('match')
-    } else {
-        console.log('else')
-    }
-});
+
 const App = () =>{
     const [data, setData] = useState(null);
     console.log(data)
@@ -25,6 +18,7 @@ const App = () =>{
                 <Section data={data}/>
                 <Main data={data}/>
                 <Footer data={data}/>
+                <New/>
             </div>
         </>
     )
