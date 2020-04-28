@@ -16,6 +16,27 @@ const Header = ({setData}) => {
                 setData(info);
             });
     }, [changePlace]);
+    const getLocation = ()=> {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+            x.innerHTML = "Geolocation is not supported by this browser.";
+        }
+    }
+
+    const showPosition = (position) =>{
+
+        const lat = position.coords.latitude
+        const lon = position.coords.longitude
+
+        fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&cnt=60&lang=pl&appid=ea814effdba0637eb431a0e15e2de736`)
+            .then(response => {
+                return response.json();
+            })
+            .then(info => {
+                setData(() => info);
+            });
+    }
 
     return(
         <>

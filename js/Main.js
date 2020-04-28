@@ -10,8 +10,6 @@ const Main = ({data})=>{
 
     if(data == null){
 
-    }else{
-        console.log(data.name)
     }
 
 

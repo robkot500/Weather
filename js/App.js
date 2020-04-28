@@ -10,7 +10,7 @@ import New from "./New";
 
 const App = () =>{
     const [data, setData] = useState(null);
-    console.log(data)
+
     return(
         <>
             <div className='container'>

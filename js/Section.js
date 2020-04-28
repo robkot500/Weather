@@ -48,8 +48,6 @@ const Section = ({data})=>{
 
     }
 
-
-    console.log(name, 'kkkkk')
     return(
         <>
             <div className="row">

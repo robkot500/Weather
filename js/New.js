@@ -1,4 +1,6 @@
 import React,{useState,useEffect} from 'react';
+import {Link} from 'react-scroll';
+
 const New = ()=> {
     var x = window.matchMedia("(max-width: 600px)")
     const[width,setWidth]= useState(x.matches)
@@ -26,7 +28,10 @@ const New = ()=> {
         // console.log("DESKTOP")
         // console.log(width)
         return (
+                <>
             <h1>DESKTOP</h1>
+</>
+
         )
     }
     if(width===true){

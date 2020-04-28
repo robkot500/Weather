@@ -93,7 +93,7 @@ const Card = ({data, type, index, dayOfWeek}) => {
             srcI = 'http://openweathermap.org/img/wn/02d@2x.png';
 
     }
-    console.log(data.list[index]);
+
     let day;
 
         const date = new Date();
@@ -114,10 +114,9 @@ const Card = ({data, type, index, dayOfWeek}) => {
             case 12: day='Piątek'; break;
             case 13: day='Sobota'; break;
             default: day='Pogoda teraz';
-                console.log(day)
+
         }
 
-    console.log(day, 'date')
 
     if(type === 'small') {
         return (
