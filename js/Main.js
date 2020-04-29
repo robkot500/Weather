@@ -31,26 +31,23 @@ const Main = ({data})=>{
                 </div>
             </div>
             <div className="row">
-                <div className="col-2">
+                <div className="col-4 col-44">
                     <div className="box box-4">
                         <Card data={data} index={16} type={'small'} dayOfWeek={2}/>
                     </div>
-                </div>
-                <div className="col-2">
                     <div className="box box-4">
                         <Card data={data} index={24} type={'small'} dayOfWeek={3}/>
                     </div>
                 </div>
-                <div className="col-2">
+                <div className="col-4 col-44">
                     <div className="box box-4">
-                        <Card data={data} index={32} type={'small'} dayOfWeek={4}/>
+                        <Card data={data} index={32} type={'small'} dayOfWeek={2}/>
+                    </div>
+                    <div className="box box-4">
+                        <Card data={data} index={39} type={'small'} dayOfWeek={3}/>
                     </div>
                 </div>
-                <div className="col-2">
-                    <div className="box box-4 last-box-4">
-                        <Card data={data} index={39} type={'small'} dayOfWeek={5}/>
-                    </div>
-                </div>
+
             </div>
 
 

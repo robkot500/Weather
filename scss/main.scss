@@ -1,5 +1,6 @@
 @import "partials/_reset";
 @import "partials/_variables";
+@import "partials/_media";
 
 *{
   margin: 0;
@@ -241,56 +242,6 @@ $gutter: 0;
   width: 100%;
   color: blue;
 }
-
-@media screen and (max-width: 600px) {
-  .container{
-    margin: 0;
-    width: 100%;
-    border-radius: unset;
-    .box-1{
-      border-radius: unset;
-      height: 15vw;
-      input{
-        width: 50vw;
-        height: 7vw;
-        font-size: 3vw;
-      }
-      .fa-search{
-        font-size: 4vw;
-        left:43vw;
-        top:1.5vw;
-      }
-      .fa-map-marked-alt{
-        font-size: 5.5vw;
-        left:52.5vw;
-        top:0.7vw;
-      }
-    }
-    .box-2 {
-
-      height: 5vw;
-      font-size: 6vw;
-
-      .time{
-        font-size: 4vw;
-      }
-    }
-    .box-4{
-      .line-small{
-       border: unset;
-      }
-    }
-  }
-}
-
-@media screen and (min-width: 601px) and (max-width: 899px) {
-  .container{
-  }
-}
-@media screen and (min-width: 900px) {
-
-}
-
-h1{
-  font-size: 40px;
+.col-44{
+  display: flex;
 }
