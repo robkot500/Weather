@@ -41,10 +41,10 @@ const Main = ({data})=>{
                 </div>
                 <div className="col-4 col-44">
                     <div className="box box-4">
-                        <Card data={data} index={32} type={'small'} dayOfWeek={2}/>
+                        <Card data={data} index={32} type={'small'} dayOfWeek={4}/>
                     </div>
-                    <div className="box box-4">
-                        <Card data={data} index={39} type={'small'} dayOfWeek={3}/>
+                    <div className="box box-4 last-box-4">
+                        <Card data={data} index={39} type={'small'} dayOfWeek={5}/>
                     </div>
                 </div>
 

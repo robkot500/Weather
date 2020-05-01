@@ -18,7 +18,6 @@ const App = () =>{
                 <Section data={data}/>
                 <Main data={data}/>
                 <Footer data={data}/>
-                <New/>
             </div>
         </>
     )

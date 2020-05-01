@@ -26,11 +26,11 @@ const Card = ({data, type, index, dayOfWeek}) => {
         description= data.list[index].weather[0].description;
         description = description.charAt(0).toUpperCase() + description.slice(1);
         icon = data.list[index].weather[0].icon;
-        wind = data.list[index].wind.speed;
+        wind = Math.round(data.list[index].wind.speed);
         temp = Math.round(data.list[index].main.temp)
         pressure = data.list[index].main.pressure;
         humidity = data.list[index].main.humidity;
-        feels = data.list[index].main.feels_like;
+        feels = Math.round(data.list[index].main.feels_like);
     }
 
     let srcI;
@@ -146,20 +146,20 @@ const Card = ({data, type, index, dayOfWeek}) => {
                     </div>
                     <div className="big-wrapper2">
                         <div className="big-wrapper2-section">
-                            Ciśnienie<br/>
-                            {pressure}hPa
+                            <div>Ciśnienie<br/></div>
+                            <div className="volume">{pressure} hPa</div>
                         </div>
                         <div className="big-wrapper2-section">
-                            Prędkość wiatru<br/>
-                            {wind}km/h
+                            <div>Prędkość wiatru<br/></div>
+                            <div className="volume">{wind} km/h</div>
                         </div>
                         <div className="big-wrapper2-section">
-                            Odczuwalna temp.<br/>
-                            {feels}°C
+                            <div>Odczuwalna temp.</div>
+                            <div className="volume">{feels} °C</div>
                         </div>
                         <div className="big-wrapper2-section">
-                            Wilgotność<br/>
-                            {humidity}%
+                            <div>Wilgotność</div>
+                            <div className='volume'>{humidity} %</div>
                         </div>
                     </div>
 
