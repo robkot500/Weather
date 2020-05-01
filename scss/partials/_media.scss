@@ -93,9 +93,28 @@
       }
 
       .box-4 {
+        height: 30vw;
+        padding: 2vw;
         .line-small {
-          border: unset;
+
         }
+        .line-cover-small{
+          font-size: 2.7vw;
+          height: 3.4vw;
+          width: 15vw;
+          top:-1.5vw;
+          //left: 2vw;
+        }
+        .small-description{
+          font-size: 3.5vw;
+          margin-bottom: -1vw;
+        }
+        .small-icon{
+          font-size: 6vw;
+        }
+      }
+      .box-4:last-child{
+        padding: 2vw 2vw 2vw 0;
       }
     }
   }
